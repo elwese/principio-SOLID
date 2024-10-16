@@ -1,5 +1,10 @@
 public class LogInAdmin extends LogIn {
     private boolean userIsAdmin;
+
+    public LogInAdmin(UserRepository userRepository) {
+        super(userRepository);
+    }
+    
     @Override
     public void log (User user) {
         this.userIsAdmin = verifyIfTheUserIsAdmin(user);
